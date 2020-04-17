@@ -8,12 +8,14 @@ import api.test.model.UserInput;
 
 public interface UserInputInterface{
 
-    List<UserInput> findAll();
-    Long save(@NotNull UserInput userInput);
+    
     Long size();
-    UserInput findById(@NotNull Long id);
-    boolean update(@NotNull Long id, String user_name, String user_password);
+    List<UserInput> findAll(int page, int limit);
+    UserInput findById(@NotNull Long id);    
+    boolean save(@NotNull UserInput userInput);
+    boolean update(@NotNull Long id, String  user_name, String user_password);
     boolean destroy(@NotNull Long id);
+
 
 
 
