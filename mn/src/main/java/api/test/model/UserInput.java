@@ -1,6 +1,6 @@
 package api.test.model;
 
-import java.util.Date;
+/*import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,6 +17,21 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+*/
+
+import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 
 
@@ -33,9 +48,9 @@ public class UserInput {
     @Column(name = "user_name")
     private String user_name;
 
-    @NotNull(message = " input password ")
+    @NotNull(message = "input password")
     @Column(name = "user_password")
-    private String user_passowrd;
+    private String user_password;
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
@@ -68,11 +83,11 @@ public class UserInput {
     }
 
     public void setUserPassword(String user_password){
-        this.user_passowrd=user_passowrd;
+        this.user_password=user_password;
     }
 
     public String getUserPassword(){
-        return user_passowrd;
+        return user_password;
     }
 
     public void setCreatedAt(Date created_at){
