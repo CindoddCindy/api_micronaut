@@ -17,18 +17,18 @@ import java.util.List;
 import com.google.gson.*;
 import api.test.model.UserInput;
 
-import api.test.repository.UserInputRepository;
 
-import api.test.repository.UserInputInterface;
+import api.test.repository.UserInputRepository;
+//import api.test.repository.UserInputInterface;
 
 
 @Validated
 @Controller("/user_input")
 public class UserInputController{
 
-    private UserInputInterface repository;
+    private UserInputRepository repository;
 
-    UserInputController(UserInputInterface repository) {
+    UserInputController(UserInputRepository repository) {
         this.repository = repository;
     }
     

@@ -1,6 +1,6 @@
 package api.test.repository;
 
-import java.util.Date;
+
 import java.util.List;
 import javax.validation.constraints.NotNull;
 import api.test.model.UserInput;
@@ -8,7 +8,6 @@ import api.test.model.UserInput;
 
 public interface UserInputInterface{
 
-    
     Long size();
     List<UserInput> findAll(int page, int limit);
     UserInput findById(@NotNull Long id);    

@@ -95,7 +95,7 @@ public class UserInput {
     }
 
     public Date getCreatedAt(){
-        return created_at=created_at;
+        return created_at;
     }
 
     public void setUpdatedAt(Date updated_at){

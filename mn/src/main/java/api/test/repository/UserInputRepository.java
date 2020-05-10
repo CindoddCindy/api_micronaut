@@ -16,6 +16,7 @@ import api.test.repository.UserInputInterface;
 @Singleton
 public class UserInputRepository implements UserInputInterface{
 
+   
     @PersistenceContext
     private EntityManager manager;
 
